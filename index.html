@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Utkarsh Singh | Operations &amp; Supply Chain Portfolio</title>
+  <meta name="description" content="E-portfolio of Utkarsh Singh, PGDM (Operations &amp; Supply Chain Management) at FIIB, New Delhi. Projects, skills, tools and resume.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#1b2a4a;
+      --navy-soft:#26385f;
+      --gold:#c9a227;
+      --gold-soft:#faf3dc;
+      --slate:#5a6784;
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --line:#e1e5ef;
+      --head:'Playfair Display',Georgia,serif;
+      --body:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:72px}
+    body{font-family:var(--body);color:#1f2937;background:var(--bg);line-height:1.6;font-size:16px}
+    a{color:inherit}
+    h1,h2,h3{font-family:var(--head);color:var(--navy);line-height:1.25}
+    .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+    /* Navigation */
+    nav{position:sticky;top:0;z-index:50;background:var(--navy);box-shadow:0 2px 10px rgba(0,0,0,.15)}
+    nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+    .brand{font-family:var(--head);color:#fff;font-weight:700;text-decoration:none;letter-spacing:.3px}
+    nav ul{display:flex;gap:6px;list-style:none;flex-wrap:wrap}
+    nav ul a{display:block;color:#dfe5f3;text-decoration:none;padding:8px 12px;border-radius:6px;font-size:.92rem;font-weight:500}
+    nav ul a:hover,nav ul a:focus-visible{background:var(--navy-soft);color:#fff}
+
+    /* Hero */
+    .hero{background:linear-gradient(135deg,var(--navy),#203358);color:#fff;padding:56px 0 48px}
+    .hero-grid{display:grid;grid-template-columns:220px 1fr;gap:36px;align-items:center}
+    .photo{width:220px;height:280px;border-radius:14px;border:4px solid var(--gold);object-fit:cover;object-position:center top;background:var(--navy-soft);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+    .hero h1{color:#fff;font-size:2.4rem;margin-bottom:6px}
+    .tagline{font-family:var(--head);font-style:italic;font-size:1.2rem;color:#e9edf7;margin-bottom:10px}
+    .credentials{color:var(--gold);font-weight:600;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+    .roles{color:#cfd7ea;font-size:.95rem;margin-bottom:16px}
+    .roles strong{color:#fff}
+    .contact-line{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.92rem;color:#dfe5f3;margin-bottom:22px}
+    .contact-line a{text-decoration:none;border-bottom:1px dotted #8fa0c6}
+    .contact-line a:hover{color:#fff}
+    .btns{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-block;padding:11px 20px;border-radius:8px;font-weight:600;font-size:.92rem;text-decoration:none;border:2px solid var(--gold);transition:transform .15s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-gold{background:var(--gold);color:var(--navy)}
+    .btn-ghost{background:transparent;color:#fff}
+
+    /* Sections */
+    section{padding:56px 0 8px}
+    .sec-title{font-size:1.8rem;padding-bottom:8px;margin-bottom:26px;border-bottom:2px solid var(--gold)}
+    .sec-intro{color:var(--slate);margin:-12px 0 24px}
+
+    /* About / education */
+    .two-col{display:grid;grid-template-columns:1.4fr 1fr;gap:24px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+    .card h3{font-size:1.1rem;margin-bottom:8px}
+    .edu-item+.edu-item{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+    .edu-item b{color:var(--navy)}
+    .muted{color:var(--slate);font-size:.92rem}
+
+    /* Projects */
+    .project{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:28px}
+    .project-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;margin-bottom:6px}
+    .project h3{font-size:1.35rem}
+    .meta{color:var(--slate);font-size:.88rem}
+    .role-line{background:var(--gold-soft);border-left:4px solid var(--gold);padding:10px 14px;border-radius:6px;margin:12px 0 18px;font-size:.95rem}
+    .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .pillar{background:var(--bg);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:10px;padding:16px;display:flex;flex-direction:column}
+    .pillar h4{font-size:.78rem;letter-spacing:1.2px;color:#9a7a10;text-transform:uppercase;margin-bottom:8px}
+    .pillar p{font-size:.93rem;flex:1;margin-bottom:14px}
+    .metric{font-family:var(--head);font-size:1.8rem;font-weight:700;color:var(--navy);line-height:1.1}
+    .metric small{display:block;font-family:var(--body);font-size:.8rem;font-weight:500;color:var(--slate);margin:2px 0 8px}
+    .pillar .btn{padding:8px 12px;font-size:.82rem;text-align:center;background:var(--gold);color:var(--navy);border-radius:6px}
+
+    /* Skills & tools */
+    .chips{display:flex;flex-wrap:wrap;gap:10px}
+    .chip{background:var(--navy);color:#fff;border:1.5px solid var(--gold);border-radius:999px;padding:8px 16px;font-size:.9rem;font-weight:500}
+    .chip em{font-style:normal;color:var(--gold);font-size:.78rem;margin-left:6px}
+
+    /* Contact */
+    .contact-card{text-align:center}
+    .contact-card p{margin-bottom:6px}
+    .contact-card .btns{justify-content:center;margin-top:16px}
+    .contact-card .btn-ghost{color:var(--navy)}
+
+    footer{margin-top:56px;background:var(--navy);color:#b9c3dd;text-align:center;padding:22px 0;font-size:.85rem}
+
+    @media (max-width:760px){
+      .hero-grid{grid-template-columns:1fr;text-align:center;justify-items:center}
+      .hero h1{font-size:1.9rem}
+      .contact-line,.btns{justify-content:center}
+      .two-col,.pillars{grid-template-columns:1fr}
+      nav .wrap{flex-direction:column;height:auto;padding:8px 20px}
+      nav ul{justify-content:center}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============ NAVIGATION (every section reachable in one click) ============ -->
+<nav aria-label="Main navigation">
+  <div class="wrap">
+    <a class="brand" href="#home">Utkarsh Singh</a>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HOME: Positioning, photo, contact, resume / LinkedIn ============ -->
+<header class="hero" id="home">
+  <div class="wrap hero-grid">
+    <!-- Save your photo in the same folder as this file and name it photo.jpg -->
+    <img class="photo" src="photo.jpg" alt="Professional headshot of Utkarsh Singh">
+    <div>
+      <h1>Utkarsh Singh</h1>
+      <p class="tagline">Operations and supply chain student who turns data into decisions, built on a mechanical engineering foundation.</p>
+      <p class="credentials">PGDM Operations &amp; Supply Chain Management &middot; 2025&ndash;27 &middot; FIIB, New Delhi</p>
+      <p class="roles"><strong>Targeting:</strong> Supply Chain Analyst &middot; Operations Analyst &middot; Business / Data Analyst</p>
+      <div class="contact-line">
+        <a href="mailto:27-utkarsh.singh@fiib.edu.in">27-utkarsh.singh@fiib.edu.in</a>
+        <a href="tel:+919540912133">+91 95409 12133</a>
+        <span>New Delhi, India</span>
+      </div>
+      <div class="btns">
+        <a class="btn btn-ghost" href="Utkarsh_Singh_Resume.pdf" download>Download R&eacute;sum&eacute;</a>
+        <a class="btn btn-gold" href="https://www.linkedin.com/in/utkarsh-singh16" target="_blank" rel="noopener">View LinkedIn &#8599;</a>
+        <!-- CERTIFICATIONS: add this button once you have a certificate with a verification link
+        <a class="btn btn-ghost" href="#certifications">Certifications</a> -->
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <h2 class="sec-title">About Me</h2>
+    <div class="two-col">
+      <div class="card">
+        <h3>Professional Summary</h3>
+        <p>PGDM candidate specialising in Operations &amp; Supply Chain Management at FIIB, with a Mechanical Engineering background and experience in data analysis, market research and cross-functional coordination. I work with Excel-based analysis, KPI tracking, inventory and supplier performance, logistics costs and demand forecasting, with working knowledge of Power BI and Python. I enjoy converting data into actionable business insights.</p>
+      </div>
+      <div class="card">
+        <h3>Education</h3>
+        <div class="edu-item">
+          <b>PGDM &ndash; Operations &amp; Supply Chain Management</b><br>
+          <span class="muted">FIIB, New Delhi &middot; 2025&ndash;2027</span><br>
+          <span class="muted">Coursework: Service Operations Management, TQM &amp; Six Sigma, Channel Management &amp; Distribution Strategy</span>
+        </div>
+        <div class="edu-item">
+          <b>B.Tech &ndash; Mechanical Engineering</b><br>
+          <span class="muted">Amity University, Uttar Pradesh &middot; 2015&ndash;2019</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS: Purpose -> Process -> Outcome ============ -->
+  <!-- IMPORTANT: replace every REPLACE_WITH_... link below with your real Google Drive / GitHub link
+       (sharing set to "Anyone with the link"). Test each one in a logged-out browser window. -->
+  <section id="projects">
+    <h2 class="sec-title">Projects &amp; Work Samples</h2>
+    <p class="sec-intro">Each project is documented as Purpose &rarr; Process &rarr; Outcome, with my individual role stated separately.</p>
+
+    <!-- Project 1 -->
+    <article class="project">
+      <div class="project-head">
+        <h3>Operations KPI Dashboard</h3>
+        <span class="meta">FIIB &middot; Academic Project &middot; Excel</span>
+      </div>
+      <p class="role-line"><strong>My role:</strong> Analyst. <strong>My contribution:</strong> Cleaned the operational data, built the interactive Excel dashboard and wrote the recommendations.</p>
+      <div class="pillars">
+        <div class="pillar">
+          <h4>Purpose</h4>
+          <p>Give managers a single view of operational performance so process gaps and exceptions can be spotted quickly.</p>
+          <a class="btn" href="REPLACE_WITH_PROJECT_BRIEF_LINK" target="_blank" rel="noopener">View Brief &#8599;</a>
+        </div>
+        <div class="pillar">
+          <h4>Process</h4>
+          <p>Cleaned operational data, analysed trends and exceptions, and built an interactive dashboard to track key performance indicators.</p>
+          <a class="btn" href="REPLACE_WITH_EXCEL_WORKFILE_LINK" target="_blank" rel="noopener">View Workfile &#8599;</a>
+        </div>
+        <div class="pillar">
+          <h4>Outcome</h4>
+          <p>Identified performance trends and areas needing managerial attention, and translated them into process-improvement recommendations.</p>
+          <a class="btn" href="REPLACE_WITH_DASHBOARD_LINK" target="_blank" rel="noopener">View Dashboard &#8599;</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="project">
+      <div class="project-head">
+        <h3>FMCG Supply Chain Analysis</h3>
+        <span class="meta">FIIB &middot; Corporate Mentorship Program &middot; Excel</span>
+      </div>
+      <p class="role-line"><strong>My role:</strong> Analyst. <strong>My contribution:</strong> Analysed SKU, inventory, logistics-cost and supplier-performance data and prepared the recommendations.</p>
+      <div class="pillars">
+        <div class="pillar">
+          <h4>Purpose</h4>
+          <p>Support operational decision-making for an FMCG supply chain using real SKU-level data.</p>
+          <a class="btn" href="REPLACE_WITH_PROJECT_BRIEF_LINK" target="_blank" rel="noopener">View Brief &#8599;</a>
+        </div>
+        <div class="pillar">
+          <h4>Process</h4>
+          <p>Analysed SKU, inventory, logistics-cost and supplier-performance data in Excel to find where the supply chain could improve.</p>
+          <a class="btn" href="REPLACE_WITH_EXCEL_WORKFILE_LINK" target="_blank" rel="noopener">View Workfile &#8599;</a>
+        </div>
+        <div class="pillar">
+          <h4>Outcome</h4>
+          <p>Delivered actionable recommendations for operational decisions based on the analysis.</p>
+          <a class="btn" href="REPLACE_WITH_REPORT_LINK" target="_blank" rel="noopener">View Report &#8599;</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="project">
+      <div class="project-head">
+        <h3>PVR Advertisement Effectiveness Study</h3>
+        <span class="meta">Kantar &middot; Market Research Intern &middot; May&ndash;Jul 2026</span>
+      </div>
+      <p class="role-line"><strong>My role:</strong> Market Research Intern. <strong>My contribution:</strong> Analysed consumer and operational data from Kantar's digital survey platform and proposed an AI-driven audience-measurement concept.</p>
+      <div class="pillars">
+        <div class="pillar">
+          <h4>Purpose</h4>
+          <p>Measure how effective advertising is for a live client study on PVR.</p>
+          <a class="btn" href="REPLACE_WITH_BRIEF_OR_SANITISED_SUMMARY_LINK" target="_blank" rel="noopener">View Summary &#8599;</a>
+        </div>
+        <div class="pillar">
+          <h4>Process</h4>
+          <p>Analysed consumer and operational data collected through Kantar's digital survey platform to generate business insights.</p>
+          <a class="btn" href="REPLACE_WITH_SANITISED_WORKING_FILE_LINK" target="_blank" rel="noopener">View Work Sample &#8599;</a>
+        </div>
+        <div class="pillar">
+          <h4>Outcome</h4>
+          <p>Proposed an AI-driven audience-measurement solution concept that improves structured data collection and reporting efficiency for the research team.</p>
+          <a class="btn" href="REPLACE_WITH_CONCEPT_DECK_LINK" target="_blank" rel="noopener">View Concept &#8599;</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 4 -->
+    <article class="project">
+      <div class="project-head">
+        <h3>Techno-Commercial Proposals for Solar Projects</h3>
+        <span class="meta">Gautam Solar Pvt. Ltd. &middot; Business Development Executive &middot; Nov 2021&ndash;Apr 2022</span>
+      </div>
+      <p class="role-line"><strong>My role:</strong> Business Development Executive. <strong>My contribution:</strong> Coordinated with client, engineering and procurement teams and prepared pricing documents, presentations and compliance reports for 100 kW&ndash;2 MW projects.</p>
+      <div class="pillars">
+        <div class="pillar">
+          <h4>Purpose</h4>
+          <p>Turn client requirements for 100 kW&ndash;2 MW solar projects into accurate, competitive proposals, faster.</p>
+          <a class="btn" href="REPLACE_WITH_SANITISED_PROPOSAL_LINK" target="_blank" rel="noopener">View Sample &#8599;</a>
+        </div>
+        <div class="pillar">
+          <h4>Process</h4>
+          <p>Worked across client, engineering and procurement teams; supported solution validation, client follow-ups, proposal discussions and lead generation.</p>
+          <a class="btn" href="REPLACE_WITH_PROCESS_LINK" target="_blank" rel="noopener">View Work Sample &#8599;</a>
+        </div>
+        <div class="pillar">
+          <h4>Outcome</h4>
+          <div class="metric">~20%<small>faster requirement-to-proposal turnaround</small></div>
+          <p><strong>10+</strong> proposals delivered; contributed to an approx. <strong>25%</strong> reduction in project costs.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 5 -->
+    <article class="project">
+      <div class="project-head">
+        <h3>Footstep Power Generator Prototype</h3>
+        <span class="meta">B.Tech Project &middot; Team of 3</span>
+      </div>
+      <p class="role-line"><strong>My role:</strong> Team Lead. <strong>My contribution:</strong> Led a 3-member team to independently design, build and test a working prototype.</p>
+      <div class="pillars">
+        <div class="pillar">
+          <h4>Purpose</h4>
+          <p>Show that the kinetic energy of footsteps can be converted into usable electricity.</p>
+          <a class="btn" href="REPLACE_WITH_PROJECT_REPORT_LINK" target="_blank" rel="noopener">View Report &#8599;</a>
+        </div>
+        <div class="pillar">
+          <h4>Process</h4>
+          <p>Designed, built and tested the prototype end to end as a team of three.</p>
+          <a class="btn" href="REPLACE_WITH_PHOTOS_OR_VIDEO_LINK" target="_blank" rel="noopener">View Demo &#8599;</a>
+        </div>
+        <div class="pillar">
+          <h4>Outcome</h4>
+          <p>A working footstep power-generator prototype that converts kinetic energy into electricity.</p>
+          <a class="btn" href="REPLACE_WITH_DEMO_VIDEO_LINK" target="_blank" rel="noopener">View Demo Video &#8599;</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ SKILLS (what I can do) ============ -->
+  <section id="skills">
+    <h2 class="sec-title">Skills</h2>
+    <p class="sec-intro">Only skills I have used in the projects above.</p>
+    <div class="chips">
+      <span class="chip">Data Analysis</span>
+      <span class="chip">KPI Tracking</span>
+      <span class="chip">Inventory &amp; Supplier Performance</span>
+      <span class="chip">Logistics Cost Analysis</span>
+      <span class="chip">Demand Forecasting</span>
+      <span class="chip">Market Research</span>
+      <span class="chip">Cross-Functional Coordination</span>
+      <span class="chip">Techno-Commercial Proposals</span>
+    </div>
+  </section>
+
+  <!-- ============ TOOLS (what I use) ============ -->
+  <section id="tools">
+    <h2 class="sec-title">Tools</h2>
+    <div class="chips">
+      <span class="chip">Microsoft Excel</span>
+      <span class="chip">MS PowerPoint</span>
+      <span class="chip">MS Word</span>
+      <span class="chip">Power BI <em>Beginner</em></span>
+      <span class="chip">Python <em>Basic</em></span>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS: uncomment and fill in once you have verifiable links ============
+  <section id="certifications">
+    <h2 class="sec-title">Certifications</h2>
+    <div class="chips">
+      <a class="chip" href="PASTE_ISSUER_VERIFICATION_URL" target="_blank" rel="noopener">Certificate name &#8599;</a>
+    </div>
+  </section>
+  -->
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <h2 class="sec-title">Contact</h2>
+    <div class="card contact-card">
+      <p><strong>Let's connect.</strong> I am open to operations, supply chain and analytics roles.</p>
+      <p class="muted">New Delhi, India</p>
+      <div class="btns">
+        <a class="btn btn-gold" href="mailto:27-utkarsh.singh@fiib.edu.in">Email Me</a>
+        <a class="btn btn-ghost" href="tel:+919540912133">+91 95409 12133</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/utkarsh-singh16" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+        <a class="btn btn-ghost" href="Utkarsh_Singh_Resume.pdf" download>R&eacute;sum&eacute;</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Utkarsh Singh &middot; PGDM, FIIB &middot; New Delhi</div>
+</footer>
+
+</body>
+</html>
